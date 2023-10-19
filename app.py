@@ -87,7 +87,7 @@ new_plot = [
 ]
 
 # Create a Dash app
-app = dash.Dash()
+app = dash.Dash(__name__)
 
 # Define the layout
 app.layout = html.Div([
