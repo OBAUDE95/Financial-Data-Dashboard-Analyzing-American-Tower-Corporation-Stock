@@ -14,7 +14,7 @@ Flask==2.2.2
 Flask-Compress==1.13
 Flask-SeaSurf==1.1.1
 fonttools==4.38.0
-gunicorn==20.1.0
+gunicorn
 idna==3.4
 importlib-metadata==5.2.0
 itsdangerous==2.1.2
