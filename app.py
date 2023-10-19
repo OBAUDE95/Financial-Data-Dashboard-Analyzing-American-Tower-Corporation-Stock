@@ -1,6 +1,6 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 import plotly.graph_objs as go
 import pandas as pd
 import yfinance as yf
@@ -124,4 +124,3 @@ app.layout = html.Div([
 
 if __name__ == "__main__":
     app.run_server()
-
