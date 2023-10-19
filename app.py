@@ -57,7 +57,8 @@ for column in columns:
                 'size': 11,  # Adjust marker size
                 'opacity': 0.7,  # Marker opacity
                 'colorscale': 'YlGnBu',
-                'line_width': 2
+                'line_width': 2,
+              "symbol": "arrow-right"
             }
         )
     )
