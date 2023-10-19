@@ -7,8 +7,7 @@ colorama==0.4.6
 cycler==0.11.0
 dash==2.7.1
 dash-auth==1.4.1
-dash-core-components==2.0.0
-dash-html-components==2.0.0
+yfinance==0.2.18
 dash-renderer==1.9.1
 dash-table==5.0.0
 Flask==2.2.2
@@ -41,4 +40,4 @@ ua-parser==0.16.1
 urllib3==1.26.13
 Werkzeug==2.2.2
 zipp==3.11.0
-yfinance==0.2.18
+
