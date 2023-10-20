@@ -2,7 +2,7 @@ from dash import dcc, html
 import plotly.graph_objs as go
 import yfinance as yf
 import dash
-
+import plotly.express as px
 # Load stock data
 yf.pdr_override()
 data = yf.download('AMT', start='2023-01-01')
@@ -24,7 +24,7 @@ symbols = ['circle', 'triangle-up', 'triangle-down', 'square', 'diamond']
 color_scales = ['Viridis', 'Plasma', 'Inferno', 'Magma', 'Cividis']
 
 for column, symbol, color in zip(columns, symbols, color_scales):
-    trace.append(go.Scatter(x=last_month.index, y=last_month[column],animation_frame=last_month.index, mode='lines+markers',
+    trace.append(go.Scatter(x=last_month.index, y=last_month[column], mode='lines+markers',
                             name=column, text=last_month['Month'], marker={'size': last_month[column]/10, 'opacity': 1, 'colorscale': color, 'line_width': 2, 'symbol': symbol}))
 
 # Define content
@@ -35,9 +35,9 @@ Explore American Tower Corporation's monthly stock data. Crafted by **Obaude Ayo
 '''
 
 # Define your plot data for monthly volume analysis
-volume_plot = [go.Scattergl(x=groupbymonth['Volume'].index, y=groupbymonth['Volume'].values, mode='lines+markers',
+volume_plot = [px.scatter(x=groupbymonth['Volume'].index, y=groupbymonth['Volume'].values, mode='lines+markers',
                             marker={'size': groupbymonth['Volume'].values/1500000, 'opacity': 1, 'colorscale': 'RdBu', 'line_width': 1}
-                           )]
+                           ,animation_frame=last_month.index)]
 
 # Create a Dash app
 app = dash.Dash()
