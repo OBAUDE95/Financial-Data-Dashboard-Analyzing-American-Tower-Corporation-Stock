@@ -1,6 +1,7 @@
 from dash import dcc, html
 import plotly.graph_objs as go
 import yfinance as yf
+import dash
 
 # Load stock data
 yf.pdr_override()
