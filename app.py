@@ -36,7 +36,8 @@ Explore American Tower Corporation's monthly stock data. Crafted by **Obaude Ayo
 
 # Define your plot data for monthly volume analysis
 volume_plot = [go.Scattergl(x=groupbymonth['Volume'].index, y=groupbymonth['Volume'].values, mode='lines+markers',
-                            marker={'size': 10, 'opacity': 0.6, 'colorscale': 'RdBu', 'line_width': 1})]
+                            marker={'size': groupbymonth['Volume'].values/1500000, 'opacity': 1, 'colorscale': 'RdBu', 'line_width': 1}
+                           )]
 
 # Create a Dash app
 app = dash.Dash()
