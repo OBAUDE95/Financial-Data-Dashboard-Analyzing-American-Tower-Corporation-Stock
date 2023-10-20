@@ -25,7 +25,7 @@ color_scales = ['Viridis', 'Plasma', 'Inferno', 'Magma', 'Cividis']
 
 for column, symbol, color in zip(columns, symbols, color_scales):
     trace.append(go.Scatter(x=last_month.index, y=last_month[column], mode='lines+markers',
-                            name=column, text=last_month['Month'], marker={'size': 8, 'opacity': 1, 'colorscale': color, 'line_width': 2, 'symbol': symbol}))
+                            name=column, text=last_month['Month'], marker={'size': last_month[column]/10, 'opacity': 1, 'colorscale': color, 'line_width': 2, 'symbol': symbol}))
 
 # Define content
 content = '''
