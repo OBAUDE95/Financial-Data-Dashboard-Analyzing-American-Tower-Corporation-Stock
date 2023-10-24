@@ -40,4 +40,4 @@ ua-parser==0.16.1
 urllib3==1.26.13
 Werkzeug==2.2.2
 zipp==3.11.0
-
+pandas_datareader == 0.10.0
